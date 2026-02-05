@@ -1,45 +1,44 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Award, ShieldCheck, Globe, Link as LinkIcon, Check, Crown } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { Award, ShieldCheck, Globe, Link as LinkIcon, Crown, Loader2 } from 'lucide-react';
 
-const affiliations = [
-    {
-        title: "STED Council",
-        subtitle: "Central Govt. Approved",
-        description: "Official affiliation providing government-recognized training that enhances course credibility and aligns with national quality benchmarks.",
-        icon: ShieldCheck,
-        id: "01"
-    },
-    {
-        title: "Skill India Mission",
-        subtitle: "National Skill Development",
-        description: "Associated with the Skill India Mission to provide industry-aligned training that enhances employability and practical expertise at a national level.",
-        icon: Globe,
-        id: "02"
-    },
-    {
-        title: "AISECT",
-        subtitle: "University Partner",
-        description: "Offering quality-assured training and certified programs. This partnership strengthens our commitment to providing professional and credible dance education.",
-        icon: Award,
-        id: "03"
-    },
-    {
-        title: "SGS University",
-        subtitle: "Academic Excellence",
-        description: "University-recognized certification with a structured academic framework, elevating the educational and professional growth of every student.",
-        icon: LinkIcon,
-        id: "04"
-    }
-];
+interface Affiliation {
+    id: number;
+    title: string;
+    subtitle: string;
+    description: string;
+    logo: string | null;
+}
 
 export default function Affiliated() {
+    const [affiliations, setAffiliations] = useState<Affiliation[]>([]);
+    const [loading, setLoading] = useState(true);
     const { scrollYProgress } = useScroll();
     const yHero = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/affiliations/')
+            .then(res => res.json())
+            .then(data => {
+                setAffiliations(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error('Error fetching affiliations:', err);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-[#020202] flex items-center justify-center">
+                <Loader2 className="w-12 h-12 text-natya-gold animate-spin" />
+            </div>
+        );
+    }
 
     return (
         <div className="bg-[#020202] min-h-screen text-white overflow-hidden selection:bg-natya-gold selection:text-black font-serif">
@@ -77,46 +76,56 @@ export default function Affiliated() {
             {/* The List - Royal Docket Style */}
             <section className="py-32 container mx-auto px-6 relative z-10">
                 <div className="flex flex-col space-y-32">
-                    {affiliations.map((item, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-10%" }}
-                            transition={{ duration: 0.8 }}
-                            className="group relative"
-                        >
-                            {/* Decorative Line */}
-                            <div className="absolute top-8 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-natya-gold/50 transition-all duration-1000" />
+                    {affiliations.length === 0 ? (
+                        <div className="text-center py-20">
+                            <p className="text-gray-500 font-sans italic text-xl">No affiliations found. Add them from the admin panel.</p>
+                        </div>
+                    ) : (
+                        affiliations.map((item, i) => (
+                            <motion.div
+                                key={item.id}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-10%" }}
+                                transition={{ duration: 0.8 }}
+                                className="group relative"
+                            >
+                                {/* Decorative Line */}
+                                <div className="absolute top-8 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-natya-gold/50 transition-all duration-1000" />
 
-                            <div className="flex flex-col lg:flex-row items-baseline gap-12 lg:gap-24 relative z-10 pt-8 px-4 lg:px-12">
-                                {/* Number */}
-                                <div className="text-natya-gold/20 text-6xl md:text-8xl font-bold tracking-tighter group-hover:text-natya-gold/40 transition-colors duration-500 font-sans">
-                                    {item.id}
-                                </div>
-
-                                {/* Content */}
-                                <div className="flex-1">
-                                    <div className="flex flex-col md:flex-row md:items-center gap-6 mb-6">
-                                        <div className="w-16 h-16 rounded-full border border-natya-gold/30 flex items-center justify-center text-natya-gold bg-natya-gold/5">
-                                            <item.icon strokeWidth={1} className="w-8 h-8" />
-                                        </div>
-                                        <div>
-                                            <span className="text-natya-gold text-xs tracking-[0.2em] uppercase font-bold mb-1 block font-sans">
-                                                {item.subtitle}
-                                            </span>
-                                            <h2 className="text-4xl md:text-6xl font-bold text-white group-hover:text-natya-gold transition-colors duration-500">
-                                                {item.title}
-                                            </h2>
-                                        </div>
+                                <div className="flex flex-col lg:flex-row items-baseline gap-12 lg:gap-24 relative z-10 pt-8 px-4 lg:px-12">
+                                    {/* Number */}
+                                    <div className="text-natya-gold/20 text-6xl md:text-8xl font-bold tracking-tighter group-hover:text-natya-gold/40 transition-colors duration-500 font-sans min-w-[120px]">
+                                        {String(i + 1).padStart(2, '0')}
                                     </div>
-                                    <p className="text-xl text-gray-400 font-light leading-relaxed max-w-3xl ml-auto lg:ml-24 border-l border-white/10 pl-8 group-hover:border-natya-gold/50 transition-colors duration-500 font-sans">
-                                        {item.description}
-                                    </p>
+
+                                    {/* Content */}
+                                    <div className="flex-1">
+                                        <div className="flex flex-col md:flex-row md:items-center gap-6 mb-6">
+                                            <div className="w-16 h-16 rounded-full border border-natya-gold/30 flex items-center justify-center text-natya-gold bg-natya-gold/5 overflow-hidden">
+                                                {item.logo ? (
+                                                    <img src={item.logo} alt={item.title} className="w-full h-full object-contain p-2" />
+                                                ) : (
+                                                    <Award strokeWidth={1} className="w-8 h-8" />
+                                                )}
+                                            </div>
+                                            <div>
+                                                <span className="text-natya-gold text-xs tracking-[0.2em] uppercase font-bold mb-1 block font-sans">
+                                                    {item.subtitle}
+                                                </span>
+                                                <h2 className="text-4xl md:text-6xl font-bold text-white group-hover:text-natya-gold transition-colors duration-500">
+                                                    {item.title}
+                                                </h2>
+                                            </div>
+                                        </div>
+                                        <p className="text-xl text-gray-400 font-light leading-relaxed max-w-3xl ml-auto lg:ml-24 border-l border-white/10 pl-8 group-hover:border-natya-gold/50 transition-colors duration-500 font-sans">
+                                            {item.description}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        ))
+                    )}
                 </div>
             </section>
 
