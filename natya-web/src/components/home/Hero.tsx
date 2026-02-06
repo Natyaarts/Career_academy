@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const letterVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -100,12 +101,16 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 3.8 }}
                     className="flex gap-6"
                 >
-                    <button className="px-8 py-4 bg-natya-gold text-white font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-natya-crimson transition-all duration-500 rounded-sm shadow-[0_0_20px_rgba(180,83,9,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]">
-                        Explore Courses
-                    </button>
-                    <button className="px-8 py-4 border border-white/30 text-white font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors rounded-sm backdrop-blur-sm">
-                        View Admission
-                    </button>
+                    <Link href="/course">
+                        <button className="px-8 py-4 bg-natya-gold text-white font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-natya-crimson transition-all duration-500 rounded-sm shadow-[0_0_20px_rgba(180,83,9,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] cursor-pointer">
+                            Explore Courses
+                        </button>
+                    </Link>
+                    <Link href="/contact">
+                        <button className="px-8 py-4 border border-white/30 text-white font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors rounded-sm backdrop-blur-sm cursor-pointer">
+                            View Admission
+                        </button>
+                    </Link>
                 </motion.div>
             </motion.div>
 
