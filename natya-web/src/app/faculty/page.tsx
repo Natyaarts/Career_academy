@@ -113,7 +113,7 @@ export default function Faculty() {
                                                     <img
                                                         src={member.image}
                                                         alt={member.name}
-                                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0"
+                                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                                     />
                                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all duration-700" />
                                                 </div>

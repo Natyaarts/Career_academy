@@ -22,11 +22,15 @@ export default function Footer() {
                             Natya Career Academy stands as a beacon for classical arts, providing professional training that honors tradition while embracing the future.
                         </p>
                         <div className="flex gap-4 pt-4">
-                            {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-natya-gold hover:border-natya-gold hover:text-black transition-all">
-                                    <Icon size={18} />
-                                </a>
-                            ))}
+                            <a href="https://www.facebook.com/natyaartslearning/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-natya-gold hover:border-natya-gold hover:text-black transition-all">
+                                <Facebook size={18} />
+                            </a>
+                            <a href="https://www.instagram.com/natyaartslearning/?hl=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-natya-gold hover:border-natya-gold hover:text-black transition-all">
+                                <Instagram size={18} />
+                            </a>
+                            <a href="https://x.com/natyalearning?lang=en" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-natya-gold hover:border-natya-gold hover:text-black transition-all">
+                                <Twitter size={18} />
+                            </a>
                         </div>
                     </div>
 

@@ -35,7 +35,7 @@ export default function Navbar() {
                 className={cn(
                     'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out border-b border-transparent',
                     isScrolled
-                        ? 'bg-transparent backdrop-blur-md py-3 shadow-none'
+                        ? 'bg-transparent py-3 shadow-none'
                         : 'bg-transparent py-6'
                 )}
                 initial={{ y: -100 }}
@@ -64,7 +64,7 @@ export default function Navbar() {
                                     'text-sm font-medium transition-all duration-300 relative group tracking-wide uppercase text-[11px]',
                                     pathname === item.href
                                         ? 'text-natya-gold'
-                                        : isScrolled ? 'text-gray-800 hover:text-natya-crimson' : 'text-gray-200 hover:text-white'
+                                        : 'text-gray-200 hover:text-white'
                                 )}
                             >
                                 {item.name}

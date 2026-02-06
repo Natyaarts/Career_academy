@@ -122,7 +122,7 @@ export default function About() {
 
                         <div className="grid grid-cols-2 gap-8 pt-6">
                             <div>
-                                <h4 className="text-4xl font-serif font-bold text-natya-crimson mb-2">6+</h4>
+                                <h4 className="text-4xl font-serif font-bold text-natya-crimson mb-2">5+</h4>
                                 <p className="text-xs uppercase tracking-widest text-gray-500">Years of Legacy</p>
                             </div>
                             <div>
