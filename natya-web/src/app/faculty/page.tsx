@@ -20,7 +20,12 @@ export default function Faculty() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+        // Automatically use relative path in production, or localhost:8000 in dev
+        const defaultApi = typeof window !== 'undefined' && window.location.hostname === 'localhost'
+            ? 'http://127.0.0.1:8000'
+            : '';
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || defaultApi;
+
         fetch(`${apiUrl}/api/faculty/`)
             .then(res => res.json())
             .then(data => {
