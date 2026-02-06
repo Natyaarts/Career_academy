@@ -1,7 +1,16 @@
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env*
+natya-web/.env*
+backend/.env*
+
 # Next.js
 natya-web/.next/
 natya-web/node_modules/
-natya-web/.env*
 
 # Python
 backend/venv/
@@ -9,8 +18,10 @@ backend/__pycache__/
 backend/*.pyc
 backend/db.sqlite3
 backend/media/
+backend/staticfiles/
 
 # IDEs
 .vscode/
 .idea/
 .DS_Store
+

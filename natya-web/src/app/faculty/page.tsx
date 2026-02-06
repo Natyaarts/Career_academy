@@ -20,7 +20,8 @@ export default function Faculty() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/faculty/')
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+        fetch(`${apiUrl}/api/faculty/`)
             .then(res => res.json())
             .then(data => {
                 setFaculty(data);

@@ -20,7 +20,8 @@ export default function Affiliated() {
     const yHero = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/affiliations/')
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+        fetch(`${apiUrl}/api/affiliations/`)
             .then(res => res.json())
             .then(data => {
                 setAffiliations(data);
