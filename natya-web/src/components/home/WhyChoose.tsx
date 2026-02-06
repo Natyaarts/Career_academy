@@ -99,7 +99,7 @@ export default function WhyChoose() {
                         className="md:col-span-3 bg-white/5 border border-white/10 rounded-3xl p-10 mt-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center backdrop-blur-sm"
                     >
                         {[
-                            { label: "Years Excellence", value: "10+" },
+                            { label: "Years Excellence", value: "6+" },
                             { label: "Graduates", value: "500+" },
                             { label: "Awards", value: "50+" },
                             { label: "Dedication", value: "100%" }

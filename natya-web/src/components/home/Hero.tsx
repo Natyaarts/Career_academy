@@ -74,7 +74,7 @@ export default function Hero() {
                     transition={{ duration: 1.5, ease: "easeOut", delay: 2.8 }}
                     className="text-natya-gold font-medium uppercase tracking-[0.2em] mb-6 text-xs md:text-sm border border-natya-gold/30 px-4 py-2 rounded-full backdrop-blur-sm"
                 >
-                    Estd. 2014 &bull; Excellence in Arts
+                    Estd. 2020 &bull; Excellence in Arts
                 </motion.div>
 
                 <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-serif font-bold mb-8 leading-[0.9] tracking-tight drop-shadow-2xl flex flex-col md:block items-center">
