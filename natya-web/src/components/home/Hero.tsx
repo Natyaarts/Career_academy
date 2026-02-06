@@ -77,7 +77,7 @@ export default function Hero() {
                     Estd. 2014 &bull; Excellence in Arts
                 </motion.div>
 
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold mb-8 leading-[0.9] tracking-tight drop-shadow-2xl flex flex-col md:block items-center">
+                <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-serif font-bold mb-8 leading-[0.9] tracking-tight drop-shadow-2xl flex flex-col md:block items-center">
                     <SplitText text="Natya" />{" "}
                     <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-[#fbbf24] via-[#fff] to-[#b45309] animate-gradient-x">
                         <SplitText text="Career" delayOffset={5} />
@@ -99,15 +99,15 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 3.8 }}
-                    className="flex gap-6"
+                    className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto"
                 >
-                    <Link href="/course">
-                        <button className="px-8 py-4 bg-natya-gold text-white font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-natya-crimson transition-all duration-500 rounded-sm shadow-[0_0_20px_rgba(180,83,9,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] cursor-pointer">
+                    <Link href="/course" className="w-full sm:w-auto">
+                        <button className="w-full sm:w-auto px-8 py-4 bg-natya-gold text-white font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-natya-crimson transition-all duration-500 rounded-sm shadow-[0_0_20px_rgba(180,83,9,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] cursor-pointer">
                             Explore Courses
                         </button>
                     </Link>
-                    <Link href="/contact">
-                        <button className="px-8 py-4 border border-white/30 text-white font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors rounded-sm backdrop-blur-sm cursor-pointer">
+                    <Link href="/contact" className="w-full sm:w-auto">
+                        <button className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors rounded-sm backdrop-blur-sm cursor-pointer">
                             View Admission
                         </button>
                     </Link>

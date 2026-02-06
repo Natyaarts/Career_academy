@@ -77,7 +77,7 @@ export default function About() {
                                 <span className="w-8 h-[1px] bg-natya-gold" /> About Natya
                             </h2>
 
-                            <h3 className="text-6xl md:text-8xl font-serif font-bold text-gray-200 leading-[0.9] overflow-hidden">
+                            <h3 className="text-4xl md:text-8xl font-serif font-bold text-gray-200 leading-[0.9] overflow-hidden">
                                 <motion.span
                                     className="block"
                                     initial={{ y: "100%" }}

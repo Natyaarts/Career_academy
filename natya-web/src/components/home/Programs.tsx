@@ -75,7 +75,7 @@ function TiltCard({ program, index }: { program: typeof programs[0]; index: numb
             transition={{ delay: index * 0.1, duration: 0.6 }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative group bg-white/[0.03] hover:bg-white/[0.08] backdrop-blur-sm border border-white/5 p-8 h-[400px] flex flex-col justify-between overflow-hidden transition-all duration-300 rounded-sm cursor-pointer hover:border-natya-gold/30 shadow-2xl"
+            className="relative group bg-white/[0.03] hover:bg-white/[0.08] backdrop-blur-sm border border-white/5 p-8 min-h-[350px] md:h-[400px] flex flex-col justify-between overflow-hidden transition-all duration-300 rounded-sm cursor-pointer hover:border-natya-gold/30 shadow-2xl"
         >
             {/* Top Accent Line */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-natya-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

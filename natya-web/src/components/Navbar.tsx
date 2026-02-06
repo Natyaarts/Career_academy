@@ -44,16 +44,13 @@ export default function Navbar() {
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="group relative z-50">
-                        <div className="relative w-48 h-20 md:w-64 md:h-28">
+                        <div className="relative w-40 h-16 md:w-64 md:h-28">
                             <Image
                                 src="/img/logo.png"
                                 alt="Natya Logo"
                                 fill
                                 className="object-contain transition-all duration-300"
                             />
-                            {/* Fallback for visibility issues: ensure logo is visible on dark backgrounds */}
-                            {/* If the logo is black by default, we invert it for hero (transparent header) to be white. */}
-                            {/* If scroll (white header), we remove invert to be black. */}
                         </div>
                     </Link>
 
