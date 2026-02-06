@@ -44,7 +44,7 @@ export default function Navbar() {
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="group relative z-50">
-                        <div className="relative w-40 h-16 md:w-64 md:h-28">
+                        <div className="relative w-48 h-20 md:w-80 md:h-36 -my-4 md:-my-8">
                             <Image
                                 src="/img/logo.png"
                                 alt="Natya Logo"

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useRef } from 'react';
 
@@ -130,16 +131,18 @@ export default function About() {
                             </div>
                         </div>
 
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="group relative px-8 py-4 bg-gray-900 text-white overflow-hidden rounded-sm"
-                        >
-                            <span className="relative z-10 font-bold uppercase tracking-widest text-xs flex items-center gap-2">
-                                Discover Our Story <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                            </span>
-                            <div className="absolute inset-0 bg-natya-crimson transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
-                        </motion.button>
+                        <Link href="/course">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="group relative px-8 py-4 bg-gray-900 text-white overflow-hidden rounded-sm w-full sm:w-auto"
+                            >
+                                <span className="relative z-10 font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                                    Explore Courses <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                                </span>
+                                <div className="absolute inset-0 bg-natya-crimson transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
+                            </motion.button>
+                        </Link>
                     </div>
                 </div>
             </div>
