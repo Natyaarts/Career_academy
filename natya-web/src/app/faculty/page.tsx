@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Award, Star, Loader2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface FacultyMember {
     id: number;
@@ -175,9 +176,11 @@ export default function Faculty() {
                         <p className="text-gray-500 font-sans font-light text-xl max-w-2xl mx-auto mb-16 leading-relaxed">
                             Step into a legacy of artistic excellence. Our enrollment remains exclusive for those who seek the highest form of discipline.
                         </p>
-                        <button className="px-12 py-5 border border-natya-gold text-natya-gold hover:bg-natya-gold hover:text-black transition-all duration-500 uppercase tracking-[0.3em] font-bold text-sm bg-transparent">
-                            Inquire for Admission
-                        </button>
+                        <Link href="/contact">
+                            <button className="px-12 py-5 border border-natya-gold text-natya-gold hover:bg-natya-gold hover:text-black transition-all duration-500 uppercase tracking-[0.3em] font-bold text-sm bg-transparent">
+                                Inquire for Admission
+                            </button>
+                        </Link>
                     </motion.div>
                 </div>
             </section>

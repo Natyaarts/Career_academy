@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import React, { useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BookOpen, GraduationCap, Award, CheckCircle2, Music, Video, ArrowRight, PlayCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -311,6 +312,28 @@ export default function Course() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+            {/* Enrollment CTA Section */}
+            <section className="py-40 border-t border-white/5 bg-[#020202] relative overflow-hidden text-center z-10">
+                <div className="container mx-auto px-6">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                    >
+                        <Award className="w-20 h-20 text-natya-gold mx-auto mb-12" strokeWidth={0.5} />
+                        <h2 className="text-4xl md:text-6xl font-bold text-white mb-12">Enroll in Our <span className="text-natya-gold italic">Classical Programs</span></h2>
+                        <p className="text-gray-500 font-sans font-light text-xl max-w-2xl mx-auto mb-16 leading-relaxed">
+                            Embark on your artistic journey today. Our admissions are currently open for the upcoming academic session.
+                        </p>
+                        <Link href="/contact">
+                            <button className="px-12 py-5 border border-natya-gold text-natya-gold hover:bg-natya-gold hover:text-black transition-all duration-500 uppercase tracking-[0.3em] font-bold text-sm bg-transparent">
+                                Enquire Now
+                            </button>
+                        </Link>
+                    </motion.div>
                 </div>
             </section>
 
