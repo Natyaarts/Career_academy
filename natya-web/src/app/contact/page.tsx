@@ -9,6 +9,7 @@ export default function Contact() {
         first_name: '',
         last_name: '',
         email: '',
+        mobile_number: '',
         message: ''
     });
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -36,7 +37,7 @@ export default function Contact() {
 
             if (response.ok) {
                 setStatus('success');
-                setFormData({ first_name: '', last_name: '', email: '', message: '' });
+                setFormData({ first_name: '', last_name: '', email: '', mobile_number: '', message: '' });
                 setTimeout(() => setStatus('idle'), 5000);
             } else {
                 const data = await response.json();
@@ -119,7 +120,6 @@ export default function Contact() {
                                         name="first_name"
                                         value={formData.first_name}
                                         onChange={handleChange}
-                                        required
                                         className="w-full bg-white/5 border border-white/10 p-3 text-white focus:border-natya-gold focus:bg-white/10 outline-none transition-all rounded-sm"
                                     />
                                 </div>
@@ -130,22 +130,32 @@ export default function Contact() {
                                         name="last_name"
                                         value={formData.last_name}
                                         onChange={handleChange}
-                                        required
                                         className="w-full bg-white/5 border border-white/10 p-3 text-white focus:border-natya-gold focus:bg-white/10 outline-none transition-all rounded-sm"
                                     />
                                 </div>
                             </div>
 
-                            <div className="group">
-                                <label className="text-[10px] uppercase tracking-widest text-gray-500 mb-2 block font-bold">Email Address</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full bg-white/5 border border-white/10 p-3 text-white focus:border-natya-gold focus:bg-white/10 outline-none transition-all rounded-sm"
-                                />
+                            <div className="grid grid-cols-2 gap-6">
+                                <div className="group">
+                                    <label className="text-[10px] uppercase tracking-widest text-gray-500 mb-2 block font-bold">Email Address</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className="w-full bg-white/5 border border-white/10 p-3 text-white focus:border-natya-gold focus:bg-white/10 outline-none transition-all rounded-sm"
+                                    />
+                                </div>
+                                <div className="group">
+                                    <label className="text-[10px] uppercase tracking-widest text-gray-500 mb-2 block font-bold">Mobile Number</label>
+                                    <input
+                                        type="tel"
+                                        name="mobile_number"
+                                        value={formData.mobile_number}
+                                        onChange={handleChange}
+                                        className="w-full bg-white/5 border border-white/10 p-3 text-white focus:border-natya-gold focus:bg-white/10 outline-none transition-all rounded-sm"
+                                    />
+                                </div>
                             </div>
 
                             <div className="group">
@@ -155,7 +165,6 @@ export default function Contact() {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    required
                                     className="w-full bg-white/5 border border-white/10 p-3 text-white focus:border-natya-gold focus:bg-white/10 outline-none transition-all rounded-sm resize-none"
                                 />
                             </div>
