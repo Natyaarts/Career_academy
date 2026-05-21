@@ -13,6 +13,7 @@ const navItems = [
     { name: 'Courses', href: '/course' },
     { name: 'Faculty', href: '/faculty' },
     { name: 'Affiliated', href: '/affiliated' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
 ];
 
