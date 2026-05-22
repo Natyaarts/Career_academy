@@ -61,7 +61,7 @@ export default function Faculty() {
                     >
                         <span className="text-natya-gold text-xs tracking-[0.5em] uppercase font-bold mb-8 block">The Master's Circle</span>
                         <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-12">
-                            Royal <span className="text-natya-gold italic">Faculty</span>
+                            <span className="text-natya-gold italic">Faculty</span>
                         </h1>
                         <div className="max-w-2xl mx-auto h-[1px] bg-gradient-to-r from-transparent via-natya-gold/50 to-transparent mb-12" />
                         <p className="text-gray-400 font-sans font-extralight text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed italic">
