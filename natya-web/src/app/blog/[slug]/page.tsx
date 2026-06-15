@@ -214,20 +214,6 @@ export default function BlogPostDetail() {
                             className="blog-content-html"
                         />
                     </motion.div>
-
-                    {/* Author Signature Block */}
-                    <div className="mt-16 pt-12 border-t border-white/5 flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-white/[0.01] border border-white/5 p-8 rounded-2xl">
-                        <div className="w-16 h-16 rounded-full bg-natya-gold/10 border border-natya-gold/30 flex items-center justify-center text-natya-gold shrink-0">
-                            <User size={28} strokeWidth={1} />
-                        </div>
-                        <div className="text-center sm:text-left space-y-2">
-                            <span className="text-xs text-natya-gold uppercase font-bold tracking-wider font-sans">Published By</span>
-                            <h4 className="text-xl font-serif font-bold text-white">{post.author_name}</h4>
-                            <p className="text-xs font-sans font-light text-gray-500">
-                                Scholar & Resident Faculty Guru at Natya Career Academy. Dedicated to preserving the legacy and teaching of traditional performing arts.
-                            </p>
-                        </div>
-                    </div>
                 </div>
 
             </div>
