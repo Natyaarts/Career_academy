@@ -98,10 +98,10 @@ function TiltCard({ program, index }: { program: typeof programs[0]; index: numb
                 </p>
             </div>
 
-            <div style={{ transform: "translateZ(30px)" }} className="flex justify-between items-end border-t border-white/10 pt-6 mt-auto transition-transform duration-300">
-                <program.icon className="text-gray-400 group-hover:text-natya-gold transition-colors duration-300" size={24} />
-                <ArrowUpRight className="text-gray-600 group-hover:text-white transform group-hover:rotate-45 transition-all duration-300" size={20} />
-            </div>
+             <div style={{ transform: "translateZ(30px)" }} className="flex justify-between items-end border-t border-white/10 pt-6 mt-auto transition-transform duration-300">
+                 <program.icon className="text-gray-400 group-hover:text-natya-gold transition-colors duration-300" size={24} />
+                 <ArrowUpRight className="text-gray-600 group-hover:text-white transform group-hover:rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" size={20} />
+             </div>
 
             {/* Hover Glow */}
             <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-natya-gold rounded-full blur-[80px] opacity-0 group-hover:opacity-20 transition-opacity duration-500" />

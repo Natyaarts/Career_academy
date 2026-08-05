@@ -43,7 +43,7 @@ export default function About() {
                                     src="/assets/about-img.png"
                                     alt="Classical Dance Class"
                                     fill
-                                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                                    className="object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-[1.03]"
                                 />
                             </div>
                         </motion.div>
@@ -58,7 +58,7 @@ export default function About() {
                                     src="/assets/program-mudra.png"
                                     alt="Detailed Mudra"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover transition-transform duration-700 hover:scale-[1.03]"
                                 />
                             </div>
                             {/* Gold Accent Box */}
