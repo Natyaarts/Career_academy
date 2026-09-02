@@ -46,35 +46,12 @@ export default function Navbar() {
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <Link href="/" className="group relative z-50 block">
                         <div className="relative w-48 h-20 md:w-80 md:h-36 -my-4 md:-my-8">
-                             {/* INDEPENDENCE DAY THEME START: Premium Realistic Waving Silk Flag Image inside logo container */}
-                             <div style={{ position: 'absolute' }} className="top-[2px] left-[4px] md:top-[0px] md:left-[6px] select-none pointer-events-none z-0 w-[210px] md:w-[360px] h-[101px] md:h-[173px] overflow-visible drop-shadow-[0_4px_10px_rgba(0,0,0,0.45)]">
-                                 <style>{`
-                                     @keyframes flagRipple {
-                                         0% { transform: translateY(0px) skewY(0deg); }
-                                         50% { transform: translateY(-2px) skewY(-0.8deg); }
-                                         100% { transform: translateY(0px) skewY(0deg); }
-                                     }
-                                     .animate-flag-ripple {
-                                         animation: flagRipple 4.5s ease-in-out infinite;
-                                     }
-                                 `}</style>
-                                 <Image
-                                     src="/img/waving_indian_flag_ribbon_v3.png"
-                                     alt="Waving Indian Flag"
-                                     fill
-                                     className="object-contain animate-flag-ripple [filter:drop-shadow(0_1px_3px_rgba(0,0,0,0.65))]"
-                                 />
-                             </div>
-
                             <Image
                                 src="/img/logo.png"
                                 alt="Natya Logo"
                                 fill
-                                className="object-contain transition-all duration-300 [filter:drop-shadow(0_1px_4px_rgba(255,255,255,0.4))]"
+                                className="object-contain transition-all duration-300"
                             />
-                            {/* Backlighting Glow behind Logo to pop dark text */}
-                            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#FF9933]/15 via-white/20 to-[#128807]/15 blur-xl rounded-full scale-95 pointer-events-none select-none" />
-                            {/* INDEPENDENCE DAY THEME END */}
                         </div>
                     </Link>
 
