@@ -4,7 +4,6 @@ const backend = process.env.BACKEND_URL || "http://127.0.0.1:8000";
 const { protocol, hostname, port } = new URL(backend);
 
 const nextConfig: NextConfig = {
-  skipTrailingSlashRedirect: true,
   images: {
     remotePatterns: [
       {

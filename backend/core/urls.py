@@ -6,7 +6,7 @@ from rest_framework.routers import DefaultRouter
 from contacts.views import ContactRequestViewSet, FacultyMemberViewSet, AffiliationViewSet
 from blog.views import BlogPostViewSet
 
-router = DefaultRouter()
+router = DefaultRouter(trailing_slash=False)
 router.register(r'contact-requests', ContactRequestViewSet, basename='contact-request')
 router.register(r'faculty', FacultyMemberViewSet, basename='faculty')
 router.register(r'affiliations', AffiliationViewSet, basename='affiliation')
