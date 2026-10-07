@@ -23,10 +23,11 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
-      {
-        source: "/api/:path*",
-        destination: `${backend}/api/:path*`,
-      },
+      { source: "/api/:path*", destination: `${backend}/api/:path*` },
+      { source: "/admin", destination: `${backend}/admin/` },
+      { source: "/admin/:path*", destination: `${backend}/admin/:path*` },
+      { source: "/static/:path*", destination: `${backend}/static/:path*` },
+      { source: "/media/:path*", destination: `${backend}/media/:path*` },
     ];
   },
 };
