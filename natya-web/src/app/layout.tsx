@@ -31,13 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-K9VJS3GX" />
+      <GoogleTagManager gtmId="GTM-K8S6Z2LN" />
       <body
         className={`${inter.variable} ${playfair.variable} antialiased bg-white text-gray-900 overflow-x-hidden selection:bg-rose-500 selection:text-white`}
       >
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-K9VJS3GX"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K8S6Z2LN"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}

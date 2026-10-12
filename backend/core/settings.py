@@ -136,3 +136,6 @@ CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000,
 CORS_ALLOW_ALL_ORIGINS = DEBUG  # Allow all in debug mode, use specific origins in production
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8080", "http://localhost:8080", "https://www.natyacareeracademy.com"]
