@@ -22,6 +22,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Natya Career Academy | Classical Arts & Performance",
   description: "Where classical arts become lifelong careers. Professional training in Bharatanatyam and Carnatic music.",
+  other: {
+  "google-site-verification":
+  "LBg15oQ5PAXEICfM6AjEOWjW79GU-hH-jhA5xPeaUN4",
+  },
 };
 
 export default function RootLayout({
