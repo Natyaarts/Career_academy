@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Admin / Private folders (undengil block cheyyan)
+Disallow: /admin/
+Disallow: /login/
+
+# Sitemap Link
+Sitemap: https://www.natyacareeracademy.com/sitemap.xml
