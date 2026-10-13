@@ -86,7 +86,7 @@ export default function About() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
                                 >
-                                    Nurturing
+                                     Leading
                                 </motion.span>
                                 <motion.span
                                     className="block text-transparent bg-clip-text bg-gradient-to-r from-natya-gold to-yellow-600 italic lg:ml-20 pb-2"
@@ -95,7 +95,7 @@ export default function About() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.8, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
                                 >
-                                    The Soul
+                                    Classical Dance
                                 </motion.span>
                                 <motion.span
                                     className="block lg:ml-40"
@@ -104,7 +104,7 @@ export default function About() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.8, delay: 0.2, ease: [0.33, 1, 0.68, 1] }}
                                 >
-                                    Of Art.
+                                     Institute.
                                 </motion.span>
                             </h3>
                         </motion.div>
@@ -117,7 +117,12 @@ export default function About() {
                             transition={{ delay: 0.4 }}
                         >
                             <span className="text-2xl font-serif text-natya-gold mr-1">"</span>
-                            Natya Career Academy is a premier institution dedicated to nurturing the next generation of performing artists with a global vision. Founded with a passion for preserving and promoting India’s rich classical arts heritage, Natya offers structured training.
+                            Welcome to Natya Career Academy, a premier Performing Arts Institute
+                            in Kerala dedicated to preserving and teaching Indian classical dance
+                            traditions. If you are searching for a recognized dance institute near
+                            me or a professional dance school near me, our academy offers a
+                            university-standard curriculum with flexible offline classes at
+                            Nadakkave, Kozhikode, and live online batches worldwide.
                         </motion.p>
 
                         <div className="grid grid-cols-2 gap-8 pt-6">

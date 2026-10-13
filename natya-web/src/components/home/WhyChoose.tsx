@@ -5,30 +5,30 @@ import { Star, Users, Trophy, Heart, CheckCircle2, Music, GraduationCap, Globe }
 
 const features = [
     {
-        title: "Expert Faculty",
-        description: "Learn from award-winning gurus and performing artists.",
-        icon: Users,
+        title: "Certified Diploma Courses",
+        description: "Certified Dance Diploma courses recognized by STED Council & Skill India Mission.",
+        icon: GraduationCap,
         colSpan: "md:col-span-2",
         bg: "bg-gradient-to-br from-natya-crimson to-black"
     },
     {
-        title: "Global Recognition",
-        description: "Certification recognized worldwide.",
-        icon: Globe,
-        colSpan: "md:col-span-1",
-        bg: "bg-neutral-900"
-    },
-    {
-        title: "Live Performance",
-        description: "Regular stage opportunities for all students.",
+        title: "Classical Dance Modules",
+        description: "Comprehensive training in Indian classical dance diploma course modules (Bharatanatyam, Mohiniyattam, Kuchipudi).",
         icon: Music,
         colSpan: "md:col-span-1",
         bg: "bg-neutral-900"
     },
     {
-        title: "Holistic Growth",
-        description: "Focus on theory, history, and stage presence.",
-        icon: Heart,
+        title: "Flexible Learning",
+        description: "Flexible learning options: Offline campus in Kozhikode & Interactive Online Live Classes.",
+        icon: Globe,
+        colSpan: "md:col-span-1",
+        bg: "bg-neutral-900"
+    },
+    {
+        title: "Classical Dance PG Programs",
+        description: "Specialized classical dance PG programs for advanced dancers, teachers, and performers.",
+        icon: Users,
         colSpan: "md:col-span-2",
         bg: "bg-gradient-to-br from-natya-gold to-yellow-900"
     }
@@ -60,7 +60,7 @@ export default function WhyChoose() {
                         transition={{ delay: 0.2 }}
                         className="text-xl text-gray-400 max-w-2xl mx-auto font-light"
                     >
-                        Experience the perfect blend of traditional Gurukula values and modern artistic excellence.
+                        Why Study at Our Performing Arts Institute?
                     </motion.p>
                 </div>
 

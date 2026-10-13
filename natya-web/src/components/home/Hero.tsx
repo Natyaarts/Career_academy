@@ -56,7 +56,7 @@ export default function Hero() {
             >
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: `url('/assets/hero-bg.png')` }}
+                    style={{ backgroundImage: `url('/assets/hero-bg.jpeg')` }}
                 />
                 {/* Cinematic Gradient Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-natya-crimson/90" />
@@ -116,6 +116,19 @@ export default function Hero() {
                     <br className="hidden md:block" />{" "}
                     <SplitText text="Academy" delayOffset={11} />
                 </h1>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        duration: 1,
+                        delay: 3.5,
+                        ease: "easeOut",
+                    }}
+                    className="text-base sm:text-lg md:text-2xl font-medium text-white mb-4 max-w-4xl mx-auto leading-relaxed"
+                >
+                    Best Performing Arts &amp; Classical Dance Institute in Kerala
+                </motion.p>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}

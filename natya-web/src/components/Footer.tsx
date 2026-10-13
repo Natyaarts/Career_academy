@@ -59,7 +59,7 @@ export default function Footer() {
                     <div className="md:col-span-2">
                         <h4 className="font-bold mb-8 text-sm uppercase tracking-widest text-natya-gold">Visit Us</h4>
                         <address className="not-italic text-gray-400 text-sm space-y-4">
-                            <p>SG Arcade, KT Gopalan Rd,<br />Kottooli, Kozhikode, Kerala 673016</p>
+                            <p>C M Mathew Brothers Arcade, Near Westway Hotel, Kannur Road,<br />Chakkorathukulam, Nadakkave, Kozhikode, Keralam 673006</p>
                             <p className="text-white">+91 755 986 1455</p>
                             <p className="text-white">info@natyacareer.com</p>
                         </address>

@@ -20,13 +20,45 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Natya Career Academy | Classical Arts & Performance",
-  description: "Where classical arts become lifelong careers. Professional training in Bharatanatyam and Carnatic music.",
+  title:
+    "Natya Career Academy | Dance Diploma Courses & Performing Arts Institute Kerala",
+  description:
+    "Join Natya Career Academy in Kozhikode, Kerala. Offering Indian classical dance diploma courses, PG programs, and professional performing arts training at our premier institute.",
+  metadataBase: new URL("https://www.natyacareeracademy.com"),
+
+  openGraph: {
+    title:
+      "Natya Career Academy | Online & Offline Classical Dance Diploma Courses",
+    description:
+      "Premier performing arts institute in Kerala offering certified classical dance diploma courses online & offline.",
+    images: [
+      {
+        url: "/assets/images/og-banner.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Natya Career Academy Online and Offline Classical Dance Diploma Courses",
+      },
+    ],
+    url: "/",
+    siteName: "Natya Career Academy",
+    locale: "en_IN",
+    type: "website",
+  },
+
   other: {
-  "google-site-verification":
-  "LBg15oQ5PAXEICfM6AjEOWjW79GU-hH-jhA5xPeaUN4",
+    "google-site-verification":
+      "LBg15oQ5PAXEICfM6AjEOWjW79GU-hH-jhA5xPeaUN4",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Natya Career Academy | Online & Offline Classical Dance Diploma Courses",
+    description: "Premier performing arts institute in Kerala offering certified classical dance diploma courses online & offline.",
+    images: ["/assets/images/og-banner.jpeg"],
   },
 };
+
+
 
 export default function RootLayout({
   children,
